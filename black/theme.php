@@ -8,34 +8,11 @@
 	<title><?=wCMS::get('config','siteTitle')?> - <?=wCMS::page('title')?></title>
 	<meta name="description" content="<?=wCMS::page('description')?>">
 	<meta name="keywords" content="<?=wCMS::page('keywords')?>">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?=wCMS::asset('css/style.css')?>">
 	<?=wCMS::css()?>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-   <script type="text/javascript">
-   $(document).ready(function() {
-   	   $("body").css("display", "none"); /** body (здесь и далее) означает, что эффект применяется ко всей странице. Можно изменить на идентификаторы любых элементов (#content, .comments и т.д.) */
-
-	   $("body").fadeIn(1000); /** время появления в миллисекундах */
-	 
-	   $("a.fade").click(function(event){ /** a.fade означает, что данное решение будет работать только при нажатии на ссылки с классом (class) "fade" (можно изменить на свой) */
-		   event.preventDefault();
-		   linkLocation = this.href;
-		   $("body").fadeOut(1000, redirectPage); /** время изчезания в миллисекундах */
-	   });
-
-	   function redirectPage() {
-		   window.location = linkLocation;
-	   }
-   });
-   </script>
-   <script type="text/javascript">$(document).ready(function(){
-$(window).scroll(function () {if ($(this).scrollTop() > 0) {$('#scroller').fadeIn();} else {$('#scroller').fadeOut();}});
-$('#scroller').click(function () {$('body,html').animate({scrollTop: 0}, 400); return false;});
-});</script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 </head>
 <body>
 
@@ -69,16 +46,14 @@ $('#scroller').click(function () {$('body,html').animate({scrollTop: 0}, 400); r
 			<div class="visible-xs spacer20"></div>
 			<div class="blueBackground padding20 rounded5">
 				<?=wCMS::block('subside')?>
-<br>
-				<!-- Add font awesome icons -->
-				<center>
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-vk"></a>
-<a href="#" class="fa fa-skype"></a>
-</center>
+				<br>
+
+				<!-- Add font awesome between these comment blocks -->
+
+
+
+				<!-- Add font awesome icons HERE -->
+
 			</div>
 		</div>
 	</div>
@@ -89,10 +64,31 @@ $('#scroller').click(function () {$('body,html').animate({scrollTop: 0}, 400); r
 		</div>
 	</footer>
 
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.autosize/3.0.17/autosize.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+		<?=wCMS::js()?>
 	<?=wCMS::js()?>
-	<div id="scroller" class="b-top" style="display: none;"><span class="b-top-but">наверх</span></div>
+	<div id="scroller" class="b-top" style="display: none;"><span class="b-top-but">Back to top</span></div>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("body").css("display", "none");
+		$("body").fadeIn(1000);
+
+		$("a.fade").click(function(event){
+			event.preventDefault();
+			linkLocation = this.href;
+			$("body").fadeOut(1000, redirectPage);
+		});
+		function redirectPage() {
+			window.location = linkLocation;
+		}
+	});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(window).scroll(function () {if ($(this).scrollTop() > 0) {$('#scroller').fadeIn();} else {$('#scroller').fadeOut();}});
+			$('#scroller').click(function () {$('body,html').animate({scrollTop: 0}, 400); return false;});
+		});
+	</script>
 </body>
 </html>
