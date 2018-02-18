@@ -12,7 +12,7 @@ I will be glad if you come to my site and download also other free scripts, plan
 
 to add social icons open theme.php and add this:
 
-<!-- Add font awesome icons -->
+```html <!-- Add font awesome icons -->
 <center>
 <a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
@@ -21,6 +21,7 @@ to add social icons open theme.php and add this:
 <a href="#" class="fa fa-vk"></a>
 <a href="#" class="fa fa-skype"></a>
 </center>
+
 
 in the place you want
 
