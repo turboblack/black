@@ -23,7 +23,7 @@
 			<div class="col-sm-5 text-center">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMobile">&#9776;</button>
-					<a href="./"><h3><?=wCMS::get('config','siteTitle')?><span class="navbar" id="logo"></h3></a>
+					<a href="./"><h3><?=wCMS::get('config','siteTitle')?><span class="navbar" id="logo"></span></h3></a>
 				</div>
 			</div>
 			<div class="col-sm-7 text-center">
