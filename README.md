@@ -21,7 +21,7 @@ to add social icons open theme.php and add this:
 <a href="#" class="fa fa-vk"></a>
 <a href="#" class="fa fa-skype"></a>
 </center>
-
+```
 
 in the place you want
 
